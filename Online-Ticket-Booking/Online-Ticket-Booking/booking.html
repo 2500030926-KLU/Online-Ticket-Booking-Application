@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Tickets - TicketBook</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                🎟️ <span>TicketBook</span>
+            </a>
+
+            <a href="index.html" class="back-link">
+                ← Back to Movies
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="booking-page">
+
+        <div class="booking-title">
+
+            <span class="section-label">
+                BOOK YOUR TICKETS
+            </span>
+
+            <h1 id="movieTitle">
+                Movie Booking
+            </h1>
+
+            <p>
+                Select your theater, show and favorite seats.
+            </p>
+
+        </div>
+
+
+        <!-- Theater and Date -->
+
+        <section class="booking-box">
+
+            <div class="booking-step">
+
+                <span class="step-number">
+                    1
+                </span>
+
+                <div class="step-content">
+
+                    <h2>
+                        Select Theater
+                    </h2>
+
+                    <select id="theater">
+
+                        <option value="">
+                            Select a theater
+                        </option>
+
+                        <option value="PVR Cinemas - Vijayawada">
+                            PVR Cinemas - Vijayawada
+                        </option>
+
+                        <option value="INOX - LEPL Centro">
+                            INOX - LEPL Centro
+                        </option>
+
+                        <option value="Trendset Cinemas">
+                            Trendset Cinemas
+                        </option>
+
+                        <option value="Cinepolis - Vijayawada">
+                            Cinepolis - Vijayawada
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-step">
+
+                <span class="step-number">
+                    2
+                </span>
+
+                <div class="step-content">
+
+                    <h2>
+                        Select Date
+                    </h2>
+
+                    <input
+                        type="date"
+                        id="showDate"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Show Times -->
+
+        <section class="booking-box">
+
+            <div class="booking-step">
+
+                <span class="step-number">
+                    3
+                </span>
+
+                <div class="step-content">
+
+                    <h2>
+                        Select Show Time
+                    </h2>
+
+                    <div class="show-times">
+
+                        <button
+                            class="time-btn"
+                            onclick="selectTime(this)">
+
+                            10:30 AM
+
+                        </button>
+
+                        <button
+                            class="time-btn"
+                            onclick="selectTime(this)">
+
+                            1:30 PM
+
+                        </button>
+
+                        <button
+                            class="time-btn"
+                            onclick="selectTime(this)">
+
+                            4:30 PM
+
+                        </button>
+
+                        <button
+                            class="time-btn"
+                            onclick="selectTime(this)">
+
+                            7:30 PM
+
+                        </button>
+
+                        <button
+                            class="time-btn"
+                            onclick="selectTime(this)">
+
+                            10:30 PM
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Seats -->
+
+        <section class="booking-box">
+
+            <div class="seat-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        STEP 4
+                    </span>
+
+                    <h2>
+                        Select Your Seats
+                    </h2>
+
+                    <p>
+                        Choose your preferred seats below.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="screen-area">
+
+                <div class="screen">
+                    SCREEN
+                </div>
+
+                <p>
+                    All eyes this way
+                </p>
+
+            </div>
+
+
+            <!-- Premium -->
+
+            <div class="seat-category">
+
+                <div class="category-title">
+
+                    <strong>
+                        PREMIUM
+                    </strong>
+
+                    <span>
+                        ₹250
+                    </span>
+
+                </div>
+
+
+                <div class="seat-row">
+
+                    <span class="row-label">
+                        A
+                    </span>
+
+                    <button class="seat">A1</button>
+                    <button class="seat">A2</button>
+                    <button class="seat">A3</button>
+                    <button class="seat">A4</button>
+
+                    <span class="seat-gap"></span>
+
+                    <button class="seat">A5</button>
+                    <button class="seat">A6</button>
+                    <button class="seat">A7</button>
+                    <button class="seat">A8</button>
+
+                </div>
+
+
+                <div class="seat-row">
+
+                    <span class="row-label">
+                        B
+                    </span>
+
+                    <button class="seat">B1</button>
+                    <button class="seat">B2</button>
+                    <button class="seat">B3</button>
+                    <button class="seat">B4</button>
+
+                    <span class="seat-gap"></span>
+
+                    <button class="seat">B5</button>
+                    <button class="seat">B6</button>
+                    <button class="seat">B7</button>
+                    <button class="seat">B8</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Gold -->
+
+            <div class="seat-category">
+
+                <div class="category-title">
+
+                    <strong>
+                        GOLD
+                    </strong>
+
+                    <span>
+                        ₹200
+                    </span>
+
+                </div>
+
+
+                <div class="seat-row">
+
+                    <span class="row-label">
+                        C
+                    </span>
+
+                    <button class="seat">C1</button>
+                    <button class="seat">C2</button>
+                    <button class="seat">C3</button>
+                    <button class="seat">C4</button>
+
+                    <span class="seat-gap"></span>
+
+                    <button class="seat">C5</button>
+                    <button class="seat">C6</button>
+                    <button class="seat">C7</button>
+                    <button class="seat">C8</button>
+
+                </div>
+
+
+                <div class="seat-row">
+
+                    <span class="row-label">
+                        D
+                    </span>
+
+                    <button class="seat">D1</button>
+                    <button class="seat">D2</button>
+                    <button class="seat">D3</button>
+                    <button class="seat">D4</button>
+
+                    <span class="seat-gap"></span>
+
+                    <button class="seat">D5</button>
+                    <button class="seat">D6</button>
+                    <button class="seat">D7</button>
+                    <button class="seat">D8</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Silver -->
+
+            <div class="seat-category">
+
+                <div class="category-title">
+
+                    <strong>
+                        SILVER
+                    </strong>
+
+                    <span>
+                        ₹150
+                    </span>
+
+                </div>
+
+
+                <div class="seat-row">
+
+                    <span class="row-label">
+                        E
+                    </span>
+
+                    <button class="seat">E1</button>
+                    <button class="seat">E2</button>
+                    <button class="seat">E3</button>
+                    <button class="seat">E4</button>
+
+                    <span class="seat-gap"></span>
+
+                    <button class="seat">E5</button>
+                    <button class="seat">E6</button>
+                    <button class="seat">E7</button>
+                    <button class="seat">E8</button>
+
+                </div>
+
+
+                <div class="seat-row">
+
+                    <span class="row-label">
+                        F
+                    </span>
+
+                    <button class="seat">F1</button>
+                    <button class="seat">F2</button>
+                    <button class="seat">F3</button>
+                    <button class="seat">F4</button>
+
+                    <span class="seat-gap"></span>
+
+                    <button class="seat">F5</button>
+                    <button class="seat">F6</button>
+                    <button class="seat">F7</button>
+                    <button class="seat">F8</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Legend -->
+
+            <div class="seat-legend">
+
+                <span>
+                    <i class="legend-available"></i>
+                    Available
+                </span>
+
+                <span>
+                    <i class="legend-selected"></i>
+                    Selected
+                </span>
+
+                <span>
+                    <i class="legend-booked"></i>
+                    Booked
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Summary -->
+
+        <section class="booking-summary">
+
+            <div>
+
+                <span class="summary-label">
+                    YOUR SELECTION
+                </span>
+
+                <h2>
+                    Booking Summary
+                </h2>
+
+                <p>
+                    Seats:
+                    <strong id="selectedSeats">
+                        None
+                    </strong>
+                </p>
+
+                <p>
+                    Total:
+                    <strong>
+                        ₹<span id="totalPrice">0</span>
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-btn large-btn"
+                onclick="continueToPayment()">
+
+                Continue
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

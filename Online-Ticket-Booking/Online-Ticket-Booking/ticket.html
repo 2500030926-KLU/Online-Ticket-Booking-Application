@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Your Ticket - TicketBook</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar no-print">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                🎟️ <span>TicketBook</span>
+            </a>
+
+            <a href="index.html" class="back-link">
+                ← Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="ticket-page">
+
+        <div class="ticket-wrapper">
+
+            <div class="ticket-confirmed no-print">
+
+                ✓ Booking Confirmed
+
+            </div>
+
+
+            <div class="cinema-ticket">
+
+                <!-- Ticket Header -->
+
+                <div class="ticket-header">
+
+                    <div>
+
+                        <span>
+                            TICKETBOOK
+                        </span>
+
+                        <h2>
+                            MOVIE TICKET
+                        </h2>
+
+                    </div>
+
+                    <div class="ticket-logo">
+                        🎟️
+                    </div>
+
+                </div>
+
+
+                <!-- Movie -->
+
+                <div class="ticket-movie">
+
+                    <span>
+                        MOVIE
+                    </span>
+
+                    <h1 id="ticketMovie">
+                        Paradise
+                    </h1>
+
+                    <p>
+                        Your movie experience starts here.
+                    </p>
+
+                </div>
+
+
+                <!-- Details -->
+
+                <div class="ticket-info">
+
+                    <div>
+
+                        <span>
+                            THEATER
+                        </span>
+
+                        <strong id="ticketTheater">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            DATE
+                        </span>
+
+                        <strong id="ticketDate">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SHOW TIME
+                        </span>
+
+                        <strong id="ticketTime">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SEATS
+                        </span>
+
+                        <strong id="ticketSeats">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ticket Separator -->
+
+                <div class="ticket-cut">
+
+                    <span></span>
+
+                    <div>
+                        ✂
+                    </div>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- Bottom -->
+
+                <div class="ticket-bottom">
+
+                    <div>
+
+                        <span>
+                            BOOKING ID
+                        </span>
+
+                        <strong id="bookingId">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            AMOUNT PAID
+                        </span>
+
+                        <strong class="ticket-price">
+
+                            ₹<span id="ticketAmount">
+                                0
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Barcode-like decoration -->
+
+                <div class="barcode">
+
+                    ||| || |||| | ||| || |||| |||
+
+                </div>
+
+
+                <p class="ticket-note">
+
+                    Please show this ticket at the cinema entrance.
+
+                </p>
+
+            </div>
+
+
+            <div class="ticket-actions no-print">
+
+                <button
+                    class="primary-btn"
+                    onclick="window.print()">
+
+                    🖨 Print Ticket
+
+                </button>
+
+                <a
+                    href="my-tickets.html"
+                    class="outline-btn">
+
+                    My Tickets
+
+                </a>
+
+                <a
+                    href="index.html"
+                    class="outline-btn">
+
+                    Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

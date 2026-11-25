@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Confirm Booking - TicketBook</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                🎟️ <span>TicketBook</span>
+            </a>
+
+            <a href="booking.html" class="back-link">
+                ← Back to Booking
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="payment-page">
+
+        <div class="payment-card">
+
+            <div class="payment-icon">
+                ✓
+            </div>
+
+            <span class="section-label">
+                FINAL STEP
+            </span>
+
+            <h1>
+                Confirm Your Booking
+            </h1>
+
+            <p>
+                Review your booking details before confirming.
+            </p>
+
+
+            <div class="payment-summary">
+
+                <div>
+                    <span>Movie</span>
+                    <strong id="paymentMovie">-</strong>
+                </div>
+
+                <div>
+                    <span>Theater</span>
+                    <strong id="paymentTheater">-</strong>
+                </div>
+
+                <div>
+                    <span>Date</span>
+                    <strong id="paymentDate">-</strong>
+                </div>
+
+                <div>
+                    <span>Show Time</span>
+                    <strong id="paymentTime">-</strong>
+                </div>
+
+                <div>
+                    <span>Seats</span>
+                    <strong id="paymentSeats">-</strong>
+                </div>
+
+                <div class="amount-row">
+                    <span>Total Amount</span>
+                    <strong>
+                        ₹<span id="paymentAmount">0</span>
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="mock-payment-note">
+
+                <strong>
+                    🎟️ Mock Payment
+                </strong>
+
+                <p>
+                    This is a frontend demonstration.
+                    No real payment will be processed.
+                </p>
+
+            </div>
+
+
+            <button
+                id="confirmBookingBtn"
+                class="primary-btn full-width-btn">
+
+                Confirm & Generate Ticket
+
+            </button>
+
+
+            <p
+                id="paymentMessage"
+                class="form-message">
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

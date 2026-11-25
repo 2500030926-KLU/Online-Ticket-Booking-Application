@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TicketBook - Vijayawada</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                🎟️ <span>CineHub</span>
+            </a>
+
+            <div class="location">
+                📍 Vijayawada
+            </div>
+
+            <nav class="nav-links">
+
+                <a href="index.html" class="active">
+                    Home
+                </a>
+
+                <a href="#movies">
+                    Movies
+                </a>
+
+                <a href="#theaters">
+                    Theaters
+                </a>
+
+                <a href="#offers">
+                    Offers
+                </a>
+
+                <a href="my-tickets.html">
+                    My Tickets
+                </a>
+
+                <span id="navUserArea">
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="signup.html" class="nav-signup">
+                        Sign Up
+                    </a>
+
+                </span>
+
+            </nav>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                🎬 MOVIES IN VIJAYAWADA
+            </span>
+
+            <h1>
+                Your Movie.
+                <br>
+                Your Seat.
+                <span>Your Experience.</span>
+            </h1>
+
+            <p>
+                Discover movies, choose your favorite seats
+                and book your tickets easily.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#movies" class="primary-btn">
+                    Explore Movies
+                </a>
+
+                <a href="#theaters" class="outline-btn">
+                    View Theaters
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK SEARCH ================= -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <div class="search-item">
+
+                <span>📍</span>
+
+                <div>
+                    <small>Location</small>
+                    <strong>Vijayawada</strong>
+                </div>
+
+            </div>
+
+
+            <div class="search-divider"></div>
+
+
+            <div class="search-item">
+
+                <span>🎬</span>
+
+                <div>
+                    <small>What are you looking for?</small>
+                    <strong>Movies & Shows</strong>
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="document.getElementById('movies').scrollIntoView()">
+
+                Search
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MOVIES ================= -->
+
+    <section class="section" id="movies">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-label">
+                    NOW SHOWING
+                </span>
+
+                <h2>
+                    Popular Movies
+                </h2>
+
+                <p>
+                    Book tickets for movies playing in Vijayawada.
+                </p>
+
+            </div>
+
+            <span class="view-all">
+                Vijayawada →
+            </span>
+
+        </div>
+
+
+        <div class="movie-grid">
+
+
+            <!-- Paradise -->
+
+            <div class="movie-card">
+
+                <div class="poster">
+
+                    <img
+                        src="assets/paradise.jpg"
+                        alt="Paradise movie poster"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <div class="poster-fallback paradise-bg">
+                        PARADISE
+                    </div>
+
+                    <span class="movie-rating">
+                        ⭐ 8.2
+                    </span>
+
+                </div>
+
+                <div class="movie-content">
+
+                    <h3>Paradise</h3>
+
+                    <p>
+                        Telugu • Drama / Thriller
+                    </p>
+
+                    <div class="movie-bottom">
+
+                        <span class="coming">
+                            Coming Soon
+                        </span>
+
+                        <button
+                            onclick="openBooking('Paradise')"
+                            class="book-small">
+
+                            Book
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RRR -->
+
+            <div class="movie-card">
+
+                <div class="poster">
+
+                    <img
+                        src="assets/rrr.jpg"
+                        alt="RRR movie poster"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <div class="poster-fallback rrr-bg">
+                        RRR
+                    </div>
+
+                    <span class="movie-rating">
+                        ⭐ 8.8
+                    </span>
+
+                </div>
+
+                <div class="movie-content">
+
+                    <h3>RRR</h3>
+
+                    <p>
+                        Telugu • Action / Drama
+                    </p>
+
+                    <div class="movie-bottom">
+
+                        <span class="showing">
+                            Now Showing
+                        </span>
+
+                        <button
+                            onclick="openBooking('RRR')"
+                            class="book-small">
+
+                            Book
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Devara -->
+
+            <div class="movie-card">
+
+                <div class="poster">
+
+                    <img
+                        src="assets/devara.jpg"
+                        alt="Devara movie poster"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <div class="poster-fallback devara-bg">
+                        DEVARA
+                    </div>
+
+                    <span class="movie-rating">
+                        ⭐ 8.0
+                    </span>
+
+                </div>
+
+                <div class="movie-content">
+
+                    <h3>Devara</h3>
+
+                    <p>
+                        Telugu • Action
+                    </p>
+
+                    <div class="movie-bottom">
+
+                        <span class="showing">
+                            Now Showing
+                        </span>
+
+                        <button
+                            onclick="openBooking('Devara')"
+                            class="book-small">
+
+                            Book
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pushpa 2 -->
+
+            <div class="movie-card">
+
+                <div class="poster">
+
+                    <img
+                        src="assets/pushpa2.jpg"
+                        alt="Pushpa 2 movie poster"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <div class="poster-fallback pushpa-bg">
+                        PUSHPA 2
+                    </div>
+
+                    <span class="movie-rating">
+                        ⭐ 8.4
+                    </span>
+
+                </div>
+
+                <div class="movie-content">
+
+                    <h3>Pushpa 2</h3>
+
+                    <p>
+                        Telugu • Action / Drama
+                    </p>
+
+                    <div class="movie-bottom">
+
+                        <span class="showing">
+                            Now Showing
+                        </span>
+
+                        <button
+                            onclick="openBooking('Pushpa 2')"
+                            class="book-small">
+
+                            Book
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Salaar -->
+
+            <div class="movie-card">
+
+                <div class="poster">
+
+                    <img
+                        src="assets/salaar.jpg"
+                        alt="Salaar movie poster"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <div class="poster-fallback salaar-bg">
+                        SALAAR
+                    </div>
+
+                    <span class="movie-rating">
+                        ⭐ 8.1
+                    </span>
+
+                </div>
+
+                <div class="movie-content">
+
+                    <h3>Salaar</h3>
+
+                    <p>
+                        Telugu • Action / Thriller
+                    </p>
+
+                    <div class="movie-bottom">
+
+                        <span class="showing">
+                            Now Showing
+                        </span>
+
+                        <button
+                            onclick="openBooking('Salaar')"
+                            class="book-small">
+
+                            Book
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OG -->
+
+            <div class="movie-card">
+
+                <div class="poster">
+
+                    <img
+                        src="assets/og.jpg"
+                        alt="OG movie poster"
+                        onerror="this.style.display='none'"
+                    >
+
+                    <div class="poster-fallback og-bg">
+                        OG
+                    </div>
+
+                    <span class="movie-rating">
+                        ⭐ 8.3
+                    </span>
+
+                </div>
+
+                <div class="movie-content">
+
+                    <h3>OG</h3>
+
+                    <p>
+                        Telugu • Action / Drama
+                    </p>
+
+                    <div class="movie-bottom">
+
+                        <span class="coming">
+                            Upcoming
+                        </span>
+
+                        <button
+                            onclick="openBooking('OG')"
+                            class="book-small">
+
+                            Book
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= UPCOMING ================= -->
+
+    <section class="dark-section">
+
+        <div class="section dark-inner">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        COMING SOON
+                    </span>
+
+                    <h2>
+                        Upcoming Movies
+                    </h2>
+
+                    <p>
+                        Don't miss the next big releases.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="upcoming-grid">
+
+                <div class="upcoming-card">
+
+                    <div class="upcoming-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Paradise</h3>
+                        <p>Upcoming Telugu Release</p>
+                    </div>
+
+                    <span>
+                        Coming Soon
+                    </span>
+
+                </div>
+
+
+                <div class="upcoming-card">
+
+                    <div class="upcoming-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>OG</h3>
+                        <p>Action / Drama</p>
+                    </div>
+
+                    <span>
+                        Upcoming
+                    </span>
+
+                </div>
+
+
+                <div class="upcoming-card">
+
+                    <div class="upcoming-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>New Releases</h3>
+                        <p>Watch this space</p>
+                    </div>
+
+                    <span>
+                        Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= THEATERS ================= -->
+
+    <section class="section" id="theaters">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-label">
+                    CINEMAS
+                </span>
+
+                <h2>
+                    Popular Theaters
+                </h2>
+
+                <p>
+                    Find popular cinema halls around Vijayawada.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="theater-grid">
+
+            <div class="theater-card">
+
+                <div class="theater-icon">
+                    🎬
+                </div>
+
+                <div>
+
+                    <h3>PVR Cinemas</h3>
+
+                    <p>
+                        Vijayawada
+                    </p>
+
+                    <span>
+                        Multiple shows available
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="theater-card">
+
+                <div class="theater-icon">
+                    🎥
+                </div>
+
+                <div>
+
+                    <h3>INOX - LEPL Centro</h3>
+
+                    <p>
+                        Vijayawada
+                    </p>
+
+                    <span>
+                        Multiple screens
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="theater-card">
+
+                <div class="theater-icon">
+                    🍿
+                </div>
+
+                <div>
+
+                    <h3>Trendset Cinemas</h3>
+
+                    <p>
+                        Vijayawada
+                    </p>
+
+                    <span>
+                        Book your favorite seats
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="theater-card">
+
+                <div class="theater-icon">
+                    🎞️
+                </div>
+
+                <div>
+
+                    <h3>Cinepolis</h3>
+
+                    <p>
+                        Vijayawada
+                    </p>
+
+                    <span>
+                        Premium movie experience
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section class="offers-section" id="offers">
+
+        <div class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        SPECIAL OFFERS
+                    </span>
+
+                    <h2>
+                        Book More. Save More.
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="offers-grid">
+
+                <div class="offer-card">
+
+                    <span class="offer-icon">
+                        🎟️
+                    </span>
+
+                    <div>
+
+                        <h3>First Booking</h3>
+
+                        <p>
+                            Enjoy special benefits on your first booking.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        NEW USER
+                    </strong>
+
+                </div>
+
+
+                <div class="offer-card">
+
+                    <span class="offer-icon">
+                        👥
+                    </span>
+
+                    <div>
+
+                        <h3>Group Booking</h3>
+
+                        <p>
+                            Book seats together for your friends and family.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        GROUP
+                    </strong>
+
+                </div>
+
+
+                <div class="offer-card">
+
+                    <span class="offer-icon">
+                        ⭐
+                    </span>
+
+                    <div>
+
+                        <h3>Weekend Shows</h3>
+
+                        <p>
+                            Explore popular weekend movie shows.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        WEEKEND
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>
+                    🎟️ CineHub
+                </h2>
+
+                <p>
+                    Simple and convenient movie booking
+                    for Vijayawada.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#movies">
+                    Movies
+                </a>
+
+                <a href="#theaters">
+                    Theaters
+                </a>
+
+                <a href="my-tickets.html">
+                    My Tickets
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+                <a href="admin.html">
+                    Admin
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 TicketBook • Vijayawada
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

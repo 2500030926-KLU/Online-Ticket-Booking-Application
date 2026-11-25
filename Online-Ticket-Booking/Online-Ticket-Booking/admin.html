@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - TicketBook</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="admin-page">
+
+    <!-- ADMIN NAVBAR -->
+
+    <header class="admin-navbar">
+
+        <div class="admin-logo">
+            🎟️ TicketBook
+            <span>ADMIN</span>
+        </div>
+
+        <button
+            onclick="adminLogout()"
+            class="admin-logout">
+
+            Logout
+
+        </button>
+
+    </header>
+
+
+    <main class="admin-container">
+
+        <!-- LOGIN -->
+
+        <div
+            id="adminLogin"
+            class="admin-login-card">
+
+            <div class="admin-icon">
+                🔐
+            </div>
+
+            <h1>
+                Admin Login
+            </h1>
+
+            <p>
+                Login to manage TicketBook.
+            </p>
+
+
+            <form id="adminLoginForm">
+
+                <label>
+                    Admin Email
+                </label>
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    placeholder="admin@ticketbook.com"
+                    required
+                >
+
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="admin123"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-width-btn">
+
+                    Login as Admin
+
+                </button>
+
+            </form>
+
+
+            <p
+                id="adminLoginMessage"
+                class="form-message">
+            </p>
+
+            <small class="demo-login">
+                Demo: admin@ticketbook.com / admin123
+            </small>
+
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <div
+            id="adminDashboard"
+            class="admin-dashboard hidden">
+
+            <div class="admin-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        ADMIN MODULE
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Manage movies, shows and bookings.
+                    </p>
+
+                </div>
+
+                <span class="admin-status">
+                    ● System Active
+                </span>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+
+            <div class="admin-stats">
+
+                <div class="stat-card">
+
+                    <span>
+                        🎬
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Movies
+                        </small>
+
+                        <strong id="movieCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        🎟️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Bookings
+                        </small>
+
+                        <strong id="bookingCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        👥
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Users
+                        </small>
+
+                        <strong id="userCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        💰
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Revenue
+                        </small>
+
+                        <strong>
+                            ₹<span id="revenue">
+                                0
+                            </span>
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD MOVIE -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            MOVIE MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Add Movie
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form id="addMovieForm"
+                      class="admin-form">
+
+                    <div>
+
+                        <label>
+                            Movie Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="adminMovieName"
+                            placeholder="Enter movie name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Language
+                        </label>
+
+                        <input
+                            type="text"
+                            id="adminMovieLanguage"
+                            placeholder="Telugu"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Genre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="adminMovieGenre"
+                            placeholder="Action / Drama"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+
+                        + Add Movie
+
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- MOVIE LIST -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            MOVIES
+                        </span>
+
+                        <h2>
+                            Movie List
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="adminMovieList"
+                    class="admin-list">
+
+                </div>
+
+            </section>
+
+
+            <!-- BOOKINGS -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            BOOKING MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Recent Bookings
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="adminBookingList"
+                    class="admin-list">
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
